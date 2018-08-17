@@ -12,8 +12,4 @@ export class LandingComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  gotoPortfolio() {
-    console.log('GO!');
-  }
 }

@@ -79,6 +79,7 @@ a {
     padding: 0 10px;
     border-right: 1px solid #999;
     text-align: center;
+    font-weight: 100;
   }
 
   div:last-of-type {
@@ -103,7 +104,8 @@ a {
     div {
       flex: 0 1 30%;
       border: none;
-      font-size: 20px;
+      font-size: 27px;
+      font-weight: 300;
     }
   }
 

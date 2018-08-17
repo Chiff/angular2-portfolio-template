@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+
+  div {
+    font-size: 30px;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin anim($time) {
+  animation: fadein $time;
+}
+
+.wrapper {
+  div.anim {
+    &.a1 {
+      @include anim(2s);
+    }
+    &.a2 {
+      @include anim(2s);
+    }
+    &.a3 {
+      @include anim(4s);
+    }
+    &.a4 {
+      @include anim(6s);
+    }
+  }
+}

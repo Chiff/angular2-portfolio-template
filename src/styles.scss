@@ -23,6 +23,11 @@ body {
   cursor: pointer;
 }
 
+.link {
+  text-decoration: none;
+  color: #252525;
+}
+
 @keyframes UpDown {
   0% {
     transform: translateY(-5px) scale(0.8);
