@@ -1,0 +1,23 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(-45deg, #b0ee48, #e7e450, #d5b004, #d51900);
+  background-size: 400% 400%;
+  animation: Gradient 20s ease infinite;
+}
+
+.protfolio {
+  width: 100%;
+  height: calc(100% - 50px);
+
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.protfolio > div {
+  width: 100%;
+  display: flex;
+}

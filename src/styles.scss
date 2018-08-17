@@ -21,6 +21,15 @@ body {
   width: 100%;
   box-sizing: border-box;
   cursor: pointer;
+  position: relative;
+}
+
+.go-up-down-click {
+  position: absolute;
+  width: 100%;
+  transform: translate(0, -50%);
+  height: calc(100% + 150%);
+  outline: none;
 }
 
 .link {
@@ -43,6 +52,18 @@ body {
   }
   100% {
     transform: translateY(-5px) scale(0.8);
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0 50%
   }
 }
 
