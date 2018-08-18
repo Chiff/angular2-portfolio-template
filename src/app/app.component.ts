@@ -23,7 +23,7 @@ export class AppComponent {
 
     // It would be very kind if you won't remove this line. Thank you very much!
     console.log(
-      '%c ♥♥♥ Created with love by Martin Filo! ♥♥♥ %c Visit https://martinfilo.me for more info',
+      '%c ♥♥♥ Created with love by Martin Filo! ♥♥♥ %c Visit https://github.com/Chiff/angular2-portfolio-template for more info',
       'background: blue; color: white; display: block;',
       'background: white; color: black; display: block;'
     );
