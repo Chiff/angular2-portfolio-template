@@ -1,3 +1,18 @@
-<div [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
-  <router-outlet #o="outlet"></router-outlet>
-</div>
+<ng-container *ngIf="!loaded">
+  <div class="mask">
+    <div [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
+  </div>
+  <div class="spinner">
+    <div class="spin">
+      <i class="fas fa-sync fa-spin fa-4x"></i>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="loaded">
+  <div [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+    <router-outlet #o="outlet"></router-outlet>
+  </div>
+</ng-container>
