@@ -1,27 +1,79 @@
-# Web
+# Portfolio Template
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+Angular 2 responsive portfolio template
 
-## Development server
+* demo at https://martinfilo.me
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Table of contents
+* [Guide](#guide)
+* [Backend requirements](#backend)
 
-## Code scaffolding
+## Guide
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Fork this project
+* Open root and run `npm install` OR `yarn`
+* Goto `~src/app.component.ts`
+  * edit `USER_LINK` and `PORTFOLIO_LINK` to your own REST API,FireBase, etc..
+* Run `ng build`
+* Serve `~dist` files on your server
+* Have a nice template ^_^
 
-## Build
+## Backend
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### User
+Method
+* GET
 
-## Running unit tests
+Url
+* `USER_LINK`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Response expecting
+````
+  name: string;
+  job: string;
+  skills?: string[];
+  links?: {
+    class: string; //check https://fontawesome.com/
+    url: string;
+  }[];
+````
 
-## Running end-to-end tests
+#### Portfolio
+Method
+* GET
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Url
+* `PORTFOLIO_LINK`
 
-## Further help
+Response expecting
+````
+  {
+    title: string;
+    description?: string;
+    tags?: string[];
+    links?: {
+      class: string; //check https://fontawesome.com/
+      url: string;
+    }[];
+  }[]
+````
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Built With
+
+* [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Authors
+
+* **Martin Filo** - *Initial work* - [Chiff](https://github.com/Chiff)
+
+See also the list of [contributors](https://github.com/Chiff/angular2-portfolio-template/contributors)
+ who participated in this project. 
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

@@ -11,23 +11,24 @@ import {DataService} from './data.service';
 export class AppComponent {
   loaded = false;
 
+  USER_LINK = 'https://mfc-portfolio.firebaseio.com/user.json';
+  PORTFOLIO_LINK = 'https://mfc-portfolio.firebaseio.com/portfolio.json';
+
   constructor(private dataService: DataService) {
+    // https://www.sitepoint.com/community/t/how-not-to-let-console-log-to-cause-error-on-ie-or-other-browsers/4307
     // @ts-ignore
-    window.console = console || {};
-    // @ts-ignore
-    window.console.log = console.log || {};
+    window.console = window.console || {};
+    window.console.log = window.console.log || function () {
+    };
 
     // It would be very kind if you won't remove this line. Thank you very much!
     console.log(
-      '%c ♥♥♥ Created with love by Martin Filo! ♥♥♥ %c Visit https://github.com/Chiff for more info',
+      '%c ♥♥♥ Created with love by Martin Filo! ♥♥♥ %c Visit https://martinfilo.me for more info',
       'background: blue; color: white; display: block;',
       'background: white; color: black; display: block;'
     );
 
-    dataService.initData(
-      'https://mfc-portfolio.firebaseio.com/user.json',
-      'https://mfc-portfolio.firebaseio.com/portfolio.json'
-    ).subscribe(data => {
+    dataService.initData(this.USER_LINK, this.PORTFOLIO_LINK).subscribe(data => {
       this.loaded = true;
       if (typeof <Object>data[0].hasOwnProperty('name')) {
         dataService.user = data[0];
