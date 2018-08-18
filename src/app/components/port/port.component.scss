@@ -1,23 +1,76 @@
 .wrapper {
+  position: fixed;
+  top: 0;
+
   width: 100%;
   height: 100%;
 
-  background: linear-gradient(-45deg, #b0ee48, #e7e450, #d5b004, #d51900);
+  background: linear-gradient(-45deg, #ee6464, #7cb1e7, #bf76d5, #d55230);
   background-size: 400% 400%;
   animation: Gradient 20s ease infinite;
 }
 
-.protfolio {
-  width: 100%;
-  height: calc(100% - 50px);
-
-  display: flex;
-  flex-flow: column;
-  justify-content: space-around;
-  align-items: center;
+.navigator {
+  margin: 10px 0;
 }
 
-.protfolio > div {
+.protfolio {
   width: 100%;
+
+  max-height: calc(100% - 50px);
+  max-width: 950px;
+
+  margin: 10px auto;
+
   display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  overflow: auto;
+}
+
+$colors: red, orange, yellow, green, blue, purple, cyan;
+$repeat: 8; // How often you want the pattern to repea
+
+@for $i from 1 through $repeat {
+  $col: nth($colors, random(length($colors)));
+  app-pcard:nth-child(#{length($colors)}n+#{$i}) > .card{
+    color: black;
+    background-color: white;
+    border-color: darken($col, 2%);
+    box-shadow: 6px 6px 0 1px lighten($col, 2%);
+
+    .tags .tag {
+      border-color: darken($col, 2%);
+    }
+
+    .title {
+      color: darken($col, 10%)
+    }
+
+    .link {
+      text-decoration: none;
+      color: darken($col, 10%)
+    }
+  }
+}
+
+@media all and (max-width: 970px) {
+  .protfolio {
+    max-width: 650px;
+  }
+}
+
+@media all and (max-width: 670px) {
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .protfolio {
+    max-width: 500px;
+  }
+  .protfolio > app-pcard{
+    margin: 8px auto;
+  }
 }

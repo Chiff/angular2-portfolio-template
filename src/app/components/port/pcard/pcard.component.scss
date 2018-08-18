@@ -1,0 +1,57 @@
+.card {
+  display: flex;
+  flex-flow: column;
+  background: white;
+  padding: 15px;
+  margin: 8px;
+  border: 2px solid #666;
+  border-radius: 4px;
+
+  max-width:  300px;
+  width: 300px;
+  box-sizing: border-box;
+
+  .title {
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .description {
+    margin: 10px;
+    text-align: center;
+  }
+
+  .tags {
+    display: flex;
+    .tag {
+      flex-grow: 1;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      margin: 2px 4px;
+      padding: 2px;
+      text-align: center;
+    }
+  }
+
+  .links {
+    margin: 10px auto;
+
+    .link {
+
+    }
+  }
+}
+
+@media all and (max-width: 970px) {
+  .card {
+    width: 100%;
+    margin: 8px ;
+  }
+}
+
+@media all and (max-width: 670px) {
+  .card {
+    margin: 8px auto;
+  }
+}
