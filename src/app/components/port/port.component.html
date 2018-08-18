@@ -1,13 +1,11 @@
 <div class="wrapper">
-  <br/> <br/>
-  <div class="go-up-down" routerLink="/">
-    <div class="go-up-down-click"></div>
-    <strong>
-      <i class="fas fa-chevron-up"></i>
-      Home
-      <i class="fas fa-chevron-up"></i>
-    </strong>
+  <br/>
+  <div class="navigator">
+    <app-navigator routerLink="/">Home</app-navigator>
   </div>
   <div class="protfolio">
+    <ng-container *ngFor="let card of cards">
+      <app-pcard [card]="card"></app-pcard>
+    </ng-container>
   </div>
 </div>

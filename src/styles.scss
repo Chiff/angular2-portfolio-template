@@ -13,46 +13,9 @@ body {
   color: #252525;
 }
 
-.go-up-down {
-  height: 30px;
-  text-align: center;
-  animation: UpDown 2s ease infinite;
-  display: inline-block;
-  width: 100%;
-  box-sizing: border-box;
-  cursor: pointer;
-  position: relative;
-}
-
-.go-up-down-click {
-  position: absolute;
-  width: 100%;
-  transform: translate(0, -50%);
-  height: calc(100% + 150%);
-  outline: none;
-}
-
 .link {
   text-decoration: none;
   color: #252525;
-}
-
-@keyframes UpDown {
-  0% {
-    transform: translateY(-5px) scale(0.8);
-  }
-  25% {
-    transform: translateY(-20px)  scale(1);
-  }
-  50% {
-    transform: translateY(-5px) scale(0.8);
-  }
-  75% {
-    transform: translateY(-15px)  scale(0.9);
-  }
-  100% {
-    transform: translateY(-5px) scale(0.8);
-  }
 }
 
 @keyframes Gradient {

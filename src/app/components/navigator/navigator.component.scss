@@ -1,0 +1,35 @@
+.go-up-down {
+  height: 30px;
+  text-align: center;
+  animation: UpDown 2s ease infinite;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+}
+
+.go-up-down-click {
+  position: absolute;
+  width: 100%;
+  top: -10px;
+  height: calc(150%);
+}
+
+@keyframes UpDown {
+  0% {
+    transform: scale(0.8);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
