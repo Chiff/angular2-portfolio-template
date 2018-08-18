@@ -16,7 +16,6 @@ export class PortComponent implements OnInit {
 
   ngOnInit() {
     this.cards = this.parseCards(this.dataService.portfolio);
-    console.log(this.cards);
   }
 
   parseCards(cards: ICard[]): ICard[] {
