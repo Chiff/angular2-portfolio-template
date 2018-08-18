@@ -30,7 +30,7 @@
 }
 
 $colors: red, orange, yellow, green, blue, purple, cyan;
-$repeat: 8; // How often you want the pattern to repea
+$repeat: 30; // How often you want the pattern to repea
 
 @for $i from 1 through $repeat {
   $col: nth($colors, random(length($colors)));

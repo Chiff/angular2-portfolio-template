@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ICard} from '../../interfaces/icard';
+import {DataService} from '../../data.service';
 
 @Component({
   selector: 'app-port',
@@ -10,57 +11,23 @@ import {ICard} from '../../interfaces/icard';
 export class PortComponent implements OnInit {
   cards: ICard[] = [];
 
-  constructor() {
+  constructor(public dataService: DataService) {
   }
 
   ngOnInit() {
-    this.cards.push({
-      title: 'Test Name',
-      description: 'Test card - short description about project',
-      tags: ['adasd', 'anhg', 'mfdsasd', 'yhb'],
-      links: [
-        {
-          url: 'https://google.com',
-          class: 'fab fa-google'
-        }
-      ]
-    });
-    this.cards.push({
-      title: 'Test Name',
-      description: 'Test card - short description about project',
-      tags: ['adasd', 'anhg', 'mfdsasd', 'yhb'],
-      links: [{
-        url: 'https://google.com',
-        class: 'fab fa-google'
-      }]
-    });
-    this.cards.push({
-      title: 'Test Name',
-      description: 'Test card - short description about project',
-      tags: ['adasd', 'anhg', 'mfdsasd', 'yhb'],
-      links: [{
-        url: 'https://google.com',
-        class: 'fab fa-google'
-      }]
-    });
-    this.cards.push({
-      title: 'Test Name',
-      description: 'Test card - short description about project',
-      tags: ['adasd', 'anhg', 'mfdsasd', 'yhb'],
-      links: [{
-        url: 'https://google.com',
-        class: 'fab fa-google'
-      }]
-    });
-    this.cards.push({
-      title: 'Test Name',
-      description: 'Test card - short description about project',
-      tags: ['adasd', 'anhg', 'mfdsasd', 'yhb'],
-      links: [{
-        url: 'https://google.com',
-        class: 'fab fa-google'
-      }]
-    });
+    this.cards = this.parseCards(this.dataService.portfolio);
+    console.log(this.cards);
   }
 
+  parseCards(cards: ICard[]): ICard[] {
+    return cards.map((card: ICard) => {
+      return {
+        title: card.title || null,
+        description: card.description || null,
+        tags: card.tags || null,
+        links: card.links || null,
+      };
+    });
+
+  }
 }

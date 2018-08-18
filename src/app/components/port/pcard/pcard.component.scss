@@ -9,7 +9,10 @@
 
   max-width:  300px;
   width: 300px;
+  height: calc(100% - 16px);
   box-sizing: border-box;
+
+  justify-content: space-between;
 
   .title {
     font-weight: 700;
@@ -18,12 +21,14 @@
   }
 
   .description {
-    margin: 10px;
+    margin: 10px 0;
     text-align: center;
   }
 
   .tags {
     display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
     .tag {
       flex-grow: 1;
       border: 2px solid #ccc;
@@ -35,10 +40,11 @@
   }
 
   .links {
-    margin: 10px auto;
+    margin: 0 auto;
 
     .link {
-
+      display: inline-block;
+      margin: 8px;
     }
   }
 }

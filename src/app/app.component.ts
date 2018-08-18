@@ -17,6 +17,13 @@ export class AppComponent {
       'https://mfc-portfolio.firebaseio.com/portfolio.json'
     ).subscribe(data => {
       this.loaded = true;
+      if (typeof <Object>data[0].hasOwnProperty('name')) {
+        dataService.user = data[0];
+        dataService.portfolio = data[1];
+      } else {
+        dataService.user = data[1];
+        dataService.portfolio = data[0];
+      }
     });
   }
 }

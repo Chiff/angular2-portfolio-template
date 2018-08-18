@@ -2,25 +2,17 @@
   <div class="landing-page">
     <div class="myself">
     <span>
-      Hi! I'm <strong>Martin Filo</strong>, FrontEnd Developer
+      Hi! I'm <strong>{{dataService.user.name}}</strong>, {{dataService.user.job}}
     </span>
     </div>
 
     <div class="skills">
-      <div>Angular</div>
-      <div>Cordova</div>
-      <div>Framework7</div>
+      <div *ngFor="let skill of dataService.user.skills">{{skill}}</div>
     </div>
 
     <div class="links">
-      <a href="https://github.com/Chiff" class="link" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://linkedin.com/in/martinfilo/" class="link" target="_blank">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="mailto:martinxfilo@gmail.com" class="link" target="_blank">
-        <i class="fas fa-envelope"></i>
+      <a *ngFor="let link of dataService.user.links" href="{{link.url}}" class="link" target="_blank">
+        <i class="{{link.class ? link.class : 'fas fa-link'}}"></i>
       </a>
     </div>
   </div>
