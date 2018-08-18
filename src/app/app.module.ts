@@ -12,6 +12,7 @@ import {NotFoundComponent} from './components/not-found/not-found.component';
 import {PcardComponent} from './components/port/pcard/pcard.component';
 import {NavigatorComponent} from './components/navigator/navigator.component';
 import {HttpClientModule} from '@angular/common/http';
+import { AuthorComponent } from './components/author/author.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: LandingComponent},
@@ -26,7 +27,8 @@ const routes: Routes = [
     PortComponent,
     NotFoundComponent,
     PcardComponent,
-    NavigatorComponent
+    NavigatorComponent,
+    AuthorComponent
   ],
   imports: [
     BrowserModule,
