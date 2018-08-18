@@ -2,7 +2,7 @@
 
 Angular 2 responsive portfolio template
 
-* demo at https://martinfilo.me
+* demo at <https://martinfilo.me>
 
 ## Table of contents
 * [Guide](#guide)
