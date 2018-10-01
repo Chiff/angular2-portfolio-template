@@ -18,6 +18,9 @@ Angular 2 responsive portfolio template
 * Serve `~dist` files on your server
 * Have a nice template ^_^
 
+
+<span style="font-size: 8px; color: grey">Note: It's better to use only icons you need not all font-pack so you will have better performance on slow networks</span>
+
 ## Backend
 
 #### User
