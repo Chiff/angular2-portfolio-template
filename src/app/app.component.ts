@@ -11,8 +11,9 @@ import {DataService} from './data.service';
 export class AppComponent {
   loaded = false;
 
-  USER_LINK = 'https://mfc-portfolio.firebaseio.com/user.json';
-  PORTFOLIO_LINK = 'https://mfc-portfolio.firebaseio.com/portfolio.json';
+  // TODO FILL THESE VALUES
+  USER_LINK = '';
+  PORTFOLIO_LINK = '';
 
   constructor(private dataService: DataService) {
     // https://www.sitepoint.com/community/t/how-not-to-let-console-log-to-cause-error-on-ie-or-other-browsers/4307
